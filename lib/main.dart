@@ -1,5 +1,6 @@
 import 'package:first_app/decoration.dart';
 import 'package:flutter/material.dart';
+// import 'package:first_app/second_screen.dart';
 
 void main() {
   runApp(const MyApp());
