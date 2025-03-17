@@ -39,7 +39,7 @@ class UserProfile extends StatelessWidget {
             ClipRRect(
               borderRadius: BorderRadius.circular(24),
               child: Card(
-                child: Container(
+                child: SizedBox(
                   height: 600,
                   width: double.infinity,
                   child: Padding(
