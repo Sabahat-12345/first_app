@@ -12,7 +12,7 @@ class TextfieldDemoScreen extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Image.asset("assets/logo.png"),
+              Center(child: Image.asset("assets/logo.png")),
               const SizedBox(
                 height: 16,
               ),
