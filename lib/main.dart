@@ -1,8 +1,10 @@
 // import 'package:first_app/decoration.dart';
 // import 'package:first_app/scrolling_demo_screen.dart';
+// import 'package:first_app/homework.dart';
+import 'package:first_app/signup_screen.dart';
 import 'package:flutter/material.dart';
 
-import 'textfield_demo_screen.dart';
+// import 'textfield_demo_screen.dart';
 // import 'package:first_app/second_screen.dart';
 // import 'package:first_app/user_profile.dart';
 
@@ -24,7 +26,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor:  Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: TextfieldDemoScreen(),
+      home: SingupScreen(),
     );
   }
 }
