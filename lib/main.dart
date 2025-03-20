@@ -1,32 +1,88 @@
-// import 'package:first_app/decoration.dart';
-// import 'package:first_app/scrolling_demo_screen.dart';
-// import 'package:first_app/homework.dart';
-import 'package:first_app/signup_screen.dart';
 import 'package:flutter/material.dart';
 
-// import 'textfield_demo_screen.dart';
-// import 'package:first_app/second_screen.dart';
-// import 'package:first_app/user_profile.dart';
-
 void main() {
-  runApp(const MyApp());
+  runApp(const BulbApp());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-  
+class BulbApp extends StatelessWidget {
+  const BulbApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor:  Colors.deepPurple),
-        useMaterial3: true,
+      home: BulbScreen(),
+    );
+  }
+}
+
+class BulbScreen extends StatefulWidget {
+  @override
+  State<BulbScreen> createState() => _BulbScreenState();
+}
+
+class _BulbScreenState extends State<BulbScreen> {
+  bool isBulbOn = false;
+
+  void toggleBulb() {
+    setState(() {
+      isBulbOn = !isBulbOn;
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: const Color.fromARGB(255, 58, 57, 57),
+      // AppBar को यहाँ से हटा दिया गया है
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Container(
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                boxShadow: [
+                  BoxShadow(
+                    color: isBulbOn
+                        ? Colors.yellow.withOpacity(0.5)
+                        : const Color.fromARGB(0, 98, 96, 96),
+                    spreadRadius: 20,
+                    blurRadius: 30,
+                  ),
+                ],
+              ),
+              child: Icon(
+                Icons.lightbulb,
+                size: 150,
+                color: isBulbOn ? Colors.yellow : Colors.white,
+              ),
+            ),
+            const SizedBox(height: 30),
+            ElevatedButton(
+              onPressed: toggleBulb,
+              style: ElevatedButton.styleFrom(
+                backgroundColor: const Color.fromARGB(255, 75, 74, 74),
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 40, vertical: 20),
+                textStyle: const TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                ),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10),
+                ),
+              ),
+              child: Text(
+                isBulbOn ? 'TURN OFF' : 'TURN ON',
+                style: const TextStyle(
+                  color: Colors.white,
+                ),
+              ),
+            ),
+          ],
+        ),
       ),
-      home: SingupScreen(),
     );
   }
 }
