@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:first_app/drawer_demo_screen.dart';
 
 class SingupScreen extends StatefulWidget {
   const SingupScreen({super.key});
@@ -135,12 +136,17 @@ class _SingupScreenState extends State<SingupScreen> {
                 ),
                 ElevatedButton(
                     onPressed: () {
-                      print(" this is user name:${usernameController.text}");
-                      print(" this is user email:${emailController.text}");
-                      print(
-                          " this is user password:${passwordController.text}");
-                      print(
-                          " this is user confrom password:${confromController.text}");
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) =>
+                                  DrawerDemoScreen(username: "Sabahat Ali")));
+                      // print(" this is user name:${usernameController.text}");
+                      // print(" this is user email:${emailController.text}");
+                      // print(
+                      //     " this is user password:${passwordController.text}");
+                      // print(
+                      //     " this is user confrom password:${confromController.text}");
                     },
                     child: Text("Register"))
               ],

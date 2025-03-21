@@ -2,10 +2,13 @@
 // import 'package:first_app/scrolling_demo_screen.dart';
 // import 'package:first_app/homework.dart';
 // import 'package:first_app/signup_screen.dart';
+import 'package:first_app/signup_screen.dart';
 import 'package:flutter/material.dart';
 
-import 'package:first_app/stack_demo_screen.dart';
-// import 'task.dart';
+// import 'package:first_app/stack_demo_screen.dart';
+
+// import 'drawer_demo_screen.dart';
+// import 'package:first_app/task.dart';
 
 // import 'textfield_demo_screen.dart';
 // import 'package:first_app/second_screen.dart';
@@ -17,7 +20,6 @@ void main() {
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
-  
 
   // This widget is the root of your application.
   @override
@@ -26,10 +28,10 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor:  Colors.deepPurple),
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: StackDemoScreen(),
+      home: SingupScreen(),
     );
   }
 }
