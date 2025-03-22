@@ -136,11 +136,12 @@ class _SingupScreenState extends State<SingupScreen> {
                 ),
                 ElevatedButton(
                     onPressed: () {
-                      Navigator.push(
+                      Navigator.pushAndRemoveUntil(
                           context,
                           MaterialPageRoute(
                               builder: (context) =>
-                                  DrawerDemoScreen(username: "Sabahat Ali")));
+                                  DrawerDemoScreen(username: "Sabahat Ali")),
+                          (Route) => false);
                       // print(" this is user name:${usernameController.text}");
                       // print(" this is user email:${emailController.text}");
                       // print(
