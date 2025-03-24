@@ -3,7 +3,8 @@
 // import 'package:first_app/homework.dart';
 // import 'package:first_app/signup_screen.dart';
 // import 'package:first_app/signup_screen.dart';
-import 'package:first_app/splash_screen.dart';
+import 'package:first_app/home.dart';
+// import 'package:first_app/splash_screen.dart';
 import 'package:flutter/material.dart';
 
 // import 'package:first_app/stack_demo_screen.dart';
@@ -32,7 +33,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: SplashScreen(),
+      home: Home(),
     );
   }
 }
